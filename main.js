@@ -10,16 +10,13 @@ const juan = {
     }
 };
 
-console.log(Object.keys(juan));
+/* console.log(Object.keys(juan));
 console.log(Object.getOwnPropertyNames(juan));
-console.log(Object.entries(juan));
-
-console.log(Object.getOwnPropertyDescriptors(juan));
+console.log(Object.entries(juan)); */
 
 
-Object.defineProperty(juan, "pruebaNASA", {
-    value: "extraterrestres",
-    enumerable: true,
-    writable: true,
-    configurable: true,
-});
+
+Object.seal(juan);
+Object.freeze(juan);
+
+console.log(Object.getOwnPropertyDescriptors(juan));  
